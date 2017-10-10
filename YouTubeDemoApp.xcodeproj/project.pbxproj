@@ -7,21 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A3CF6B25DA9ADD9A787F7A /* libPods-YouTubeDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8240B83CB3EAC471AB5203E7 /* libPods-YouTubeDemoApp.a */; };
 		EF9158581F8BF33B0034CA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158571F8BF33B0034CA22 /* AppDelegate.swift */; };
-		EF91585A1F8BF33B0034CA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158591F8BF33B0034CA22 /* ViewController.swift */; };
+		EF91585A1F8BF33B0034CA22 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158591F8BF33B0034CA22 /* VideoCollectionViewController.swift */; };
 		EF91585D1F8BF33B0034CA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF91585B1F8BF33B0034CA22 /* Main.storyboard */; };
 		EF91585F1F8BF33B0034CA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF91585E1F8BF33B0034CA22 /* Assets.xcassets */; };
 		EF9158621F8BF33B0034CA22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9158601F8BF33B0034CA22 /* LaunchScreen.storyboard */; };
+		EF91586A1F8BFDB90034CA22 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158691F8BFDB90034CA22 /* VideoCollectionViewCell.swift */; };
+		EF9158721F8C00740034CA22 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158711F8C00740034CA22 /* Client.swift */; };
+		EF9158741F8C00A50034CA22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158731F8C00A50034CA22 /* Constants.swift */; };
+		EF9158761F8C00C90034CA22 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158751F8C00C90034CA22 /* Convenience.swift */; };
+		EF9158781F8C00F50034CA22 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158771F8C00F50034CA22 /* Video.swift */; };
+		EF91587C1F8C21760034CA22 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF91587B1F8C21760034CA22 /* SearchViewController.swift */; };
+		EF9158811F8C26A20034CA22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158801F8C26A20034CA22 /* LoginViewController.swift */; };
+		EF9158831F8C2A5E0034CA22 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EF9158821F8C2A5E0034CA22 /* Podfile */; };
+		EFC70E3F1F8C6085007A567F /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC70E3E1F8C6085007A567F /* GenericViewController.swift */; };
+		EFC70E411F8C65EA007A567F /* VideosTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC70E401F8C65EA007A567F /* VideosTabBarControllerViewController.swift */; };
+		EFC70E431F8C7023007A567F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC70E421F8C7023007A567F /* GCDBlackBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D17DEE303C30F5F18EF5F1A /* Pods-YouTubeDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		51A1FCD8BF96B0EC7FA1A05D /* Pods-YouTubeDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8240B83CB3EAC471AB5203E7 /* libPods-YouTubeDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouTubeDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9158541F8BF33B0034CA22 /* YouTubeDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9158571F8BF33B0034CA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF9158591F8BF33B0034CA22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF9158591F8BF33B0034CA22 /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
 		EF91585C1F8BF33B0034CA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF91585E1F8BF33B0034CA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9158611F8BF33B0034CA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF9158631F8BF33B0034CA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF9158691F8BFDB90034CA22 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF9158711F8C00740034CA22 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		EF9158731F8C00A50034CA22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF9158751F8C00C90034CA22 /* Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
+		EF9158771F8C00F50034CA22 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		EF91587B1F8C21760034CA22 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EF9158801F8C26A20034CA22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF9158821F8C2A5E0034CA22 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EF9158841F8C2EE20034CA22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFC70E3E1F8C6085007A567F /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
+		EFC70E401F8C65EA007A567F /* VideosTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		EFC70E421F8C7023007A567F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +56,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A3CF6B25DA9ADD9A787F7A /* libPods-YouTubeDemoApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74CF12EC6894F3E4F9F68D4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51A1FCD8BF96B0EC7FA1A05D /* Pods-YouTubeDemoApp.debug.xcconfig */,
+				3D17DEE303C30F5F18EF5F1A /* Pods-YouTubeDemoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD0B5C8BC88C92E74EE14FF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8240B83CB3EAC471AB5203E7 /* libPods-YouTubeDemoApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF91584B1F8BF33B0034CA22 = {
 			isa = PBXGroup;
 			children = (
+				EF9158821F8C2A5E0034CA22 /* Podfile */,
 				EF9158561F8BF33B0034CA22 /* YouTubeDemoApp */,
 				EF9158551F8BF33B0034CA22 /* Products */,
+				74CF12EC6894F3E4F9F68D4F /* Pods */,
+				DD0B5C8BC88C92E74EE14FF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +103,88 @@
 			isa = PBXGroup;
 			children = (
 				EF9158571F8BF33B0034CA22 /* AppDelegate.swift */,
-				EF9158591F8BF33B0034CA22 /* ViewController.swift */,
+				EFC70E421F8C7023007A567F /* GCDBlackBox.swift */,
+				EF91586E1F8C002A0034CA22 /* Model */,
+				EFC70E441F8C914F007A567F /* View */,
+				EF9158791F8C20DB0034CA22 /* Controller */,
+				EF91587F1F8C22030034CA22 /* Frameworks */,
+				EF91587A1F8C21060034CA22 /* Assets */,
+				EF91587D1F8C219C0034CA22 /* Supporting Files */,
+			);
+			path = YouTubeDemoApp;
+			sourceTree = "<group>";
+		};
+		EF91586E1F8C002A0034CA22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF91586F1F8C003C0034CA22 /* Client */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF91586F1F8C003C0034CA22 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				EF9158701F8C004E0034CA22 /* YouTube */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		EF9158701F8C004E0034CA22 /* YouTube */ = {
+			isa = PBXGroup;
+			children = (
+				EF9158711F8C00740034CA22 /* Client.swift */,
+				EF9158731F8C00A50034CA22 /* Constants.swift */,
+				EF9158751F8C00C90034CA22 /* Convenience.swift */,
+				EF9158771F8C00F50034CA22 /* Video.swift */,
+			);
+			name = YouTube;
+			sourceTree = "<group>";
+		};
+		EF9158791F8C20DB0034CA22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF9158801F8C26A20034CA22 /* LoginViewController.swift */,
+				EF9158691F8BFDB90034CA22 /* VideoCollectionViewCell.swift */,
+				EF9158591F8BF33B0034CA22 /* VideoCollectionViewController.swift */,
+				EF91587B1F8C21760034CA22 /* SearchViewController.swift */,
+				EFC70E3E1F8C6085007A567F /* GenericViewController.swift */,
+				EFC70E401F8C65EA007A567F /* VideosTabBarControllerViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EF91587A1F8C21060034CA22 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				EF91585B1F8BF33B0034CA22 /* Main.storyboard */,
 				EF91585E1F8BF33B0034CA22 /* Assets.xcassets */,
 				EF9158601F8BF33B0034CA22 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		EF91587D1F8C219C0034CA22 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF9158841F8C2EE20034CA22 /* GoogleService-Info.plist */,
 				EF9158631F8BF33B0034CA22 /* Info.plist */,
 			);
-			path = YouTubeDemoApp;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF91587F1F8C22030034CA22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFC70E441F8C914F007A567F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF9158661F8BF33B0034CA22 /* Build configuration list for PBXNativeTarget "YouTubeDemoApp" */;
 			buildPhases = (
+				D22F9993DEB8F820CDBCD320 /* [CP] Check Pods Manifest.lock */,
 				EF9158501F8BF33B0034CA22 /* Sources */,
 				EF9158511F8BF33B0034CA22 /* Frameworks */,
 				EF9158521F8BF33B0034CA22 /* Resources */,
+				1FA1178211E5FAA2244CA79E /* [CP] Embed Pods Frameworks */,
+				72740DA9DF4E01F2C407CB78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,18 +251,84 @@
 			files = (
 				EF9158621F8BF33B0034CA22 /* LaunchScreen.storyboard in Resources */,
 				EF91585F1F8BF33B0034CA22 /* Assets.xcassets in Resources */,
+				EF9158831F8C2A5E0034CA22 /* Podfile in Resources */,
 				EF91585D1F8BF33B0034CA22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FA1178211E5FAA2244CA79E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72740DA9DF4E01F2C407CB78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp-resources.sh",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D22F9993DEB8F820CDBCD320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouTubeDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF9158501F8BF33B0034CA22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF91585A1F8BF33B0034CA22 /* ViewController.swift in Sources */,
+				EF9158811F8C26A20034CA22 /* LoginViewController.swift in Sources */,
+				EF9158741F8C00A50034CA22 /* Constants.swift in Sources */,
+				EFC70E3F1F8C6085007A567F /* GenericViewController.swift in Sources */,
+				EF9158761F8C00C90034CA22 /* Convenience.swift in Sources */,
+				EFC70E431F8C7023007A567F /* GCDBlackBox.swift in Sources */,
+				EF91587C1F8C21760034CA22 /* SearchViewController.swift in Sources */,
+				EF91586A1F8BFDB90034CA22 /* VideoCollectionViewCell.swift in Sources */,
+				EF91585A1F8BF33B0034CA22 /* VideoCollectionViewController.swift in Sources */,
+				EF9158721F8C00740034CA22 /* Client.swift in Sources */,
+				EFC70E411F8C65EA007A567F /* VideosTabBarControllerViewController.swift in Sources */,
+				EF9158781F8C00F50034CA22 /* Video.swift in Sources */,
 				EF9158581F8BF33B0034CA22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +464,7 @@
 		};
 		EF9158671F8BF33B0034CA22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A1FCD8BF96B0EC7FA1A05D /* Pods-YouTubeDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +480,7 @@
 		};
 		EF9158681F8BF33B0034CA22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D17DEE303C30F5F18EF5F1A /* Pods-YouTubeDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

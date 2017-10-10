@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l6f-f8-e0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Search-->
+        <scene sceneID="1vS-fA-12S">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="ceD-h8-rDl" userLabel="Search" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SFH-Fo-dBo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWk-aj-V1h">
+                                <rect key="frame" x="29" y="104" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npb-av-uBg">
+                                <rect key="frame" x="0.0" y="142" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qMp-dP-fyQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="6Hf-ya-TGD"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="18Q-10-bXt" id="dPz-w3-A5L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAC-vi-iPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="18Q-10-bXt">
+                    <connections>
+                        <outlet property="delegate" destination="ceD-h8-rDl" id="NNa-Qn-Tdu"/>
+                        <outlet property="searchContentsController" destination="ceD-h8-rDl" id="Vip-7e-DPg"/>
+                        <outlet property="searchResultsDataSource" destination="ceD-h8-rDl" id="jsr-AS-yye"/>
+                        <outlet property="searchResultsDelegate" destination="ceD-h8-rDl" id="CPn-yT-xXx"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-1239" y="-1143"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="R36-OY-9QW">
+            <objects>
+                <viewController id="l6f-f8-e0r" customClass="LoginViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fH8-1I-Ne7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HU6-SN-cIL"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZw-kd-abr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-3423" y="-804"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cip-Bu-Hk5">
+            <objects>
+                <navigationController storyboardIdentifier="MasterNavigationController" id="JSA-Ph-UlH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sBv-Ow-hO8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sZy-4O-8hr" kind="relationship" relationship="rootViewController" id="Bbh-UW-9OS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVI-BE-9QQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2780" y="-803"/>
+        </scene>
+        <!--Videos Tab Bar Controller View Controller-->
+        <scene sceneID="x1L-Zf-1ft">
+            <objects>
+                <tabBarController id="sZy-4O-8hr" customClass="VideosTabBarControllerViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="f0P-Ib-xBu">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="3iF-fD-tie">
+                            <connections>
+                                <action selector="LogoutPressed:" destination="sZy-4O-8hr" id="2sw-vi-Zkf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDw-7I-zvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ceD-h8-rDl" kind="relationship" relationship="viewControllers" id="5NJ-Lb-yy1"/>
+                        <segue destination="paC-fg-y2h" kind="relationship" relationship="viewControllers" id="DF8-g7-136"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NvK-5X-fh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2046" y="-802"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="aKT-NC-0Pn">
+            <objects>
+                <collectionViewController id="paC-fg-y2h" customClass="VideoCollectionViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8cf-hd-aWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eb3-KD-kmo">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="BXb-9R-ewk" customClass="VideoCollectionViewCell" customModule="YouTubeDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="paC-fg-y2h" id="WZJ-vl-lkW"/>
+                            <outlet property="delegate" destination="paC-fg-y2h" id="3uH-ge-t3v"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Videos" image="icon_listview-selected" id="uDq-5V-NrN"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Nx-pD-Ja7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1239" y="-458"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_listview-selected" width="75" height="50"/>
+    </resources>
 </document>
