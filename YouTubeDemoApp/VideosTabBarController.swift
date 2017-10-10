@@ -9,8 +9,8 @@
 import UIKit
 import GoogleSignIn
 
+// MARK: VideosTabBarController: UITabBarController
 class VideosTabBarController: UITabBarController {
-
   
   // MARK: Actions
   
@@ -22,9 +22,9 @@ class VideosTabBarController: UITabBarController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      // Disable tabbar if user have not search anything yet.
       self.tabBar.isUserInteractionEnabled = false
     }
-  
-  
   
 }

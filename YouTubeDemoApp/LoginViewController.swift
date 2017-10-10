@@ -15,17 +15,28 @@ import Google
 
 class LoginViewController: UIViewController {
   
+  // MARK: Outlets
+  
+  @IBOutlet weak var appLabel: UILabel!
+  
+  @IBOutlet weak var stackView: UIStackView!
   // MARK: Life cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    appLabel.layer.cornerRadius = 10;
+    appLabel.layer.masksToBounds = true;
     GIDSignIn.sharedInstance().uiDelegate = self
     GIDSignIn.sharedInstance().delegate = self
     
     let googleSignInButton = GIDSignInButton(frame: CGRect(x: 20, y: 100, width: 350, height: 45))
-    //googleSignInButton.center = view.center
+    googleSignInButton.layer.cornerRadius = 10;
+    googleSignInButton.layer.masksToBounds = true;
+    stackView.addArrangedSubview(googleSignInButton)
+    stackView.translatesAutoresizingMaskIntoConstraints = false
     
-    view.addSubview(googleSignInButton)
+    self.view.addSubview(stackView)
     
     // Uncomment to automatically sign in the user.
     //GIDSignIn.sharedInstance().signInSilently()
@@ -45,13 +56,6 @@ extension LoginViewController: GIDSignInUIDelegate, GIDSignInDelegate {
   func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
               withError error: NSError!) {
     if (error == nil) {
-      // Perform any operations on signed in user here.
-      //      let userId = user.userID                  // For client-side use only!
-      //      let idToken = user.authentication.idToken // Safe to send to the server
-      //      let fullName = user.profile.name
-      //      let givenName = user.profile.givenName
-      //      let familyName = user.profile.familyName
-      //      let email = user.profile.email
     } else {
       print("\(error.localizedDescription)")
     }

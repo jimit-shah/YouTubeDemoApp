@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
+// MARK: VideoCollectionViewController: UICollectionViewController
 class VideoCollectionViewController: UICollectionViewController {
 
+  // MARK: Properties
   var videos: [Video]!
   
   let inset: CGFloat = 8.0
@@ -28,11 +31,6 @@ class VideoCollectionViewController: UICollectionViewController {
     return true
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-  
   override func viewWillAppear(_ animated: Bool) {
     refreshData()
   }
@@ -48,38 +46,21 @@ class VideoCollectionViewController: UICollectionViewController {
     return self.videos.count
   }
   
-  // cellForItemAt
+  // MARK: cellForItemAt
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as! VideoCollectionViewCell
     let video = self.videos[(indexPath as NSIndexPath).row]
-    cell.titleLabel.text = video.title
     
-    let imagePath = video.url
-      let _ = Client.sharedInstance().taskForGETImage(filePath: imagePath, completionHandlerForImage: { (imageData, error) in
-        if let image = UIImage(data: imageData!) {
-          performUIUpdatesOnMain {
-            cell.imageView!.image = image
-          }
-        } else {
-          print(error ?? "empty error")
-        }
-      })
+    // We can also use titles if needed
+    //cell.titleLabel.text = video.title
+    
+    let url = URL(string: "https://www.youtube.com/embed/\(video.videoID)")
+    cell.webView.layer.cornerRadius = 10;
+    cell.webView.layer.masksToBounds = true;
+    cell.webView.load(URLRequest(url: url!))
     
     return cell
   }
-  
-  // MARK: DetailViewController
-  
-  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
-    let playVideoController = storyboard!.instantiateViewController(withIdentifier: "PlayVideoViewController") as! PlayVideoViewController
-    
-    playVideoController.video = self.videos[(indexPath as NSIndexPath).row]
-    self.navigationController!.pushViewController(playVideoController, animated: true)
-  }
-  
-  
-  
 
 }
 

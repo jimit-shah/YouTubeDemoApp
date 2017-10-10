@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
+// MARK: VideoCollectionViewCell: UICollectionViewCell
 class VideoCollectionViewCell: UICollectionViewCell {
-    
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var titleLabel: UILabel!
+  
+  // MARK: Outlets
+  
+  @IBOutlet weak var webView: WKWebView!
 }

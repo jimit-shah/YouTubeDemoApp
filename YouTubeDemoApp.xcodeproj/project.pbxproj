@@ -21,7 +21,6 @@
 		EF91587C1F8C21760034CA22 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF91587B1F8C21760034CA22 /* SearchViewController.swift */; };
 		EF9158811F8C26A20034CA22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9158801F8C26A20034CA22 /* LoginViewController.swift */; };
 		EF9158831F8C2A5E0034CA22 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EF9158821F8C2A5E0034CA22 /* Podfile */; };
-		EF9789471F8CE97C0001555D /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9789461F8CE97C0001555D /* PlayVideoViewController.swift */; };
 		EF97894B1F8CF5370001555D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF97894A1F8CF5370001555D /* MediaPlayer.framework */; };
 		EFC70E3F1F8C6085007A567F /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC70E3E1F8C6085007A567F /* GenericViewController.swift */; };
 		EFC70E411F8C65EA007A567F /* VideosTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC70E401F8C65EA007A567F /* VideosTabBarController.swift */; };
@@ -48,7 +47,6 @@
 		EF9158801F8C26A20034CA22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF9158821F8C2A5E0034CA22 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EF9158841F8C2EE20034CA22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EF9789461F8CE97C0001555D /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		EF97894A1F8CF5370001555D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		EFC70E3E1F8C6085007A567F /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 		EFC70E401F8C65EA007A567F /* VideosTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTabBarController.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				EF91587B1F8C21760034CA22 /* SearchViewController.swift */,
 				EFC70E3E1F8C6085007A567F /* GenericViewController.swift */,
 				EFC70E401F8C65EA007A567F /* VideosTabBarController.swift */,
-				EF9789461F8CE97C0001555D /* PlayVideoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 				EF9158721F8C00740034CA22 /* Client.swift in Sources */,
 				EFC70E411F8C65EA007A567F /* VideosTabBarController.swift in Sources */,
 				EF9158781F8C00F50034CA22 /* Video.swift in Sources */,
-				EF9789471F8CE97C0001555D /* PlayVideoViewController.swift in Sources */,
 				EF9158581F8BF33B0034CA22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

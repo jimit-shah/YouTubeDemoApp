@@ -8,19 +8,19 @@
 
 import UIKit
 
+// MARK: SearchViewController: UIViewController
 class SearchViewController: UIViewController {
-
+  
   // MARK: Properties
   
   var videos: [Video]!
   var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
   
-  
   // MARK: Outlets
   
   @IBOutlet weak var searchTextField: UITextField!
-  
   @IBOutlet weak var searchButton: UIButton!
+ 
   // MARK: Lifecycle
   
   @IBAction func searchPressed(_ sender: Any) {
@@ -28,15 +28,19 @@ class SearchViewController: UIViewController {
   }
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-        configure()
-        // Do any additional setup after loading the view.
-    }
+    super.viewDidLoad()
+    
+    // configure UI
+    configure()
+    
+  }
   
   func configure() {
     searchTextField.delegate = self
   }
-
+  
+  
+  // Function to load/refresh data
   func refreshData() {
     
     startActivityIndicator(for: self, activityIndicator, .whiteLarge)
@@ -64,7 +68,7 @@ class SearchViewController: UIViewController {
   }
 }
 
-
+// MARK: UITextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
   
   // Hide keyboard on pressing return
