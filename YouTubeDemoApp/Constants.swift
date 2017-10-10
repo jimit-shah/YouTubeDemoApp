@@ -19,7 +19,7 @@ extension Client {
       // MARK: URLs
       static let ApiScheme = "https"
       static let ApiHost = "www.googleapis.com"
-      static let ApiPath = "youtube/v3/"
+      static let ApiPath = "youtube/v3"
       
       //https://www.googleapis.com/youtube/v3/search?part=apple&key={YOUR_API_KEY}
     }
@@ -58,10 +58,12 @@ extension Client {
       
       static let Items = "items"
       static let Id = "id"
-      static let VideoID = "videoId"
+      static let Snippet = "snippet"
       static let Title = "title"
       static let Tumbnail = "thumbnails"
       static let Url = "url"
+      static let VideoID = "videoId"
+      static let Default = "default"
       
     }
 

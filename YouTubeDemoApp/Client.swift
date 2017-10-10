@@ -23,12 +23,17 @@ class Client: NSObject {
   
   // MARK: GET
   
-  func taskForGETMethod(_ method: String, parameters: [String:AnyObject], completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+  func taskForGETMethod(_ method: String, _ searchText: String, completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
     
-    let parametersWithKeys = parameters
+    //let parametersWithKeys = parameters
     
     // 2/3. Build the URL, Configure the request
-    let request = NSMutableURLRequest(url: urlFromParameters(parametersWithKeys, withPathExtension: method))
+    //let request = NSMutableURLRequest(url: urlFromParameters(parametersWithKeys, withPathExtension: method))
+    let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAGZ0YBdo9MQoewpdcIZ9Ga1Zx5jwWYPkk&q=\(searchText)&type=video"
+    
+    let request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL,
+                                      cachePolicy: .useProtocolCachePolicy,
+                                      timeoutInterval: 10.0)
     request.httpMethod = "GET"
     
     // 4. Make the requeset
@@ -67,30 +72,50 @@ class Client: NSObject {
     return task
   }
  
+  // GET Thumbnail
+  func taskForGETImage(filePath: String, completionHandlerForImage: @escaping (_ imageData: Data?, _ error: NSError?) -> Void) -> URLSessionTask {
+    
+    let url = URL(string: filePath)!
+    let request = URLRequest(url: url)
+    
+    let task = session.dataTask(with: request) { (data, response, error) in
+      
+      func sendError(_ error: String) {
+        print(error)
+        let userInfo = [NSLocalizedDescriptionKey : error]
+        completionHandlerForImage(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
+      }
+      
+      /* GUARD: Was there an error? */
+      guard (error == nil) else {
+        sendError("There was an error with your request: \(error!)")
+        return
+      }
+      
+      /* GUARD: Did we get a successful 2XX response? */
+      guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
+        sendError("Your request returned a status code other than 2xx!")
+        return
+      }
+      
+      /* GUARD: Was there any data returned? */
+      guard let data = data else {
+        sendError("No data was returned by the request!")
+        return
+      }
+      
+      /* 5/6. Parse the data and use the data (happens in completion handler) */
+      completionHandlerForImage(data, nil)
+    }
+    
+    /* 7. Start the request */
+    task.resume()
+    
+    return task
+  }
   
   // MARK: Helpers
-  
-  // substitue the key for the value that is contained within the method name
-  func substituteKeyInMethod(_ method: String, key: String, value: String) -> String? {
-    if method.range(of: "{\(key)}") != nil {
-      return method.replacingOccurrences(of: "{\(key)}", with: value)
-    } else {
-      return nil
-    }
-  }
-  
-  func convertDictionaryToJSONString(dictionary: [String:AnyObject]) -> String? {
-    if JSONSerialization.isValidJSONObject(dictionary) {
-      do {
-        let data = try JSONSerialization.data(withJSONObject: dictionary, options:[])
-        return String(data: data, encoding: .utf8)!
-      } catch {
-        print("Could not convert data dictionary to JSONString for httpBody).")
-      }
-    }
-    return nil
-  }
-  
+ 
   // given raw JSON, return a usable Foundation object
   private func convertDataWithCompletionHandler(_ data: Data, completionHandlerForConvertData: (_ result: AnyObject?, _ error: NSError?) -> Void) {
     
@@ -113,6 +138,7 @@ class Client: NSObject {
     components.host = Client.Constants.ApiHost
     components.path = Client.Constants.ApiPath + (withPathExtension ?? "")
     components.queryItems = [URLQueryItem]()
+    
     
     for (key, value) in parameters {
       let queryItem = URLQueryItem(name: key, value: "\(value)")

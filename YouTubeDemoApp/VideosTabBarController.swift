@@ -9,14 +9,22 @@
 import UIKit
 import GoogleSignIn
 
-class VideosTabBarControllerViewController: UITabBarController {
+class VideosTabBarController: UITabBarController {
 
+  
+  // MARK: Actions
+  
   @IBAction func LogoutPressed(_ sender: Any) {
+  
     GIDSignIn.sharedInstance().signOut()
     self.dismiss(animated: true, completion: nil)
   }
   
     override func viewDidLoad() {
         super.viewDidLoad()
+      self.tabBar.isUserInteractionEnabled = false
     }
+  
+  
+  
 }

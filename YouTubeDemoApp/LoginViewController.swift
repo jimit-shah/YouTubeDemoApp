@@ -10,6 +10,9 @@ import UIKit
 import GoogleSignIn
 import Google
 
+
+// MARK: LoginViewController: UIViewController
+
 class LoginViewController: UIViewController {
   
   // MARK: Life cycle
@@ -19,8 +22,8 @@ class LoginViewController: UIViewController {
     GIDSignIn.sharedInstance().uiDelegate = self
     GIDSignIn.sharedInstance().delegate = self
     
-    let googleSignInButton = GIDSignInButton()
-    googleSignInButton.center = view.center
+    let googleSignInButton = GIDSignInButton(frame: CGRect(x: 20, y: 100, width: 350, height: 45))
+    //googleSignInButton.center = view.center
     
     view.addSubview(googleSignInButton)
     
@@ -60,7 +63,7 @@ extension LoginViewController: GIDSignInUIDelegate, GIDSignInDelegate {
       //print("Error: Google Signin Failed.")
       return
     }
-    showAlert("Success", message: "Welcome \(user.profile.name)", handler: {
+    showAlert("Success", message: "Welcome \(user.profile.name!)!", handler: {
       self.completeLogin()
     })
   }

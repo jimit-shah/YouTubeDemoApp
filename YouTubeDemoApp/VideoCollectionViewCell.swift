@@ -10,6 +10,6 @@ import UIKit
 
 class VideoCollectionViewCell: UICollectionViewCell {
     
-  @IBOutlet weak var videoImageView: UIImageView!
-  @IBOutlet weak var videoTitleLabel: UILabel!
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var titleLabel: UILabel!
 }
