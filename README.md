@@ -1,10 +1,10 @@
 # YouTubeDemoApp
-An iOS App that can search and play youtube videos.
+An iOS App that can search and play youtube videos. Also allow users to sign in with Google account.
 
-# Screenshots:
-# Login Page ![Login Page](https://github.com/jimit-shah/YouTubeDemoApp/blob/master/ProductScreenshots/01LoginPage.PNG)
-# Google SignIn ![Google SignIn](https://github.com/jimit-shah/YouTubeDemoApp/blob/master/ProductScreenshots/02GoogleSignInAuthentication.PNG)
-# Search Tab ![Search Tab](https://github.com/jimit-shah/YouTubeDemoApp/blob/master/ProductScreenshots/03SearchTab.PNG)
-![Result CollectionView](https://github.com/jimit-shah/YouTubeDemoApp/blob/master/ProductScreenshots/04ResultsInCollectionView.PNG)
-# Fullscreen Video ![FullScreen Video](https://github.com/jimit-shah/YouTubeDemoApp/blob/master/ProductScreenshots/05PlayVideosInFullScreen.PNG)
-# Play Controns ![Controls](https://github.com/jimit-shah/YouTubeDemoApp/blob/master/ProductScreenshots/06PlayControlsWhilePlaying.PNG)
+## App Screenshots:
+
+| Login Page  | Google SignIn | Search Tab  |
+| :---------: |:-------------:|:-----------:| 
+| <img src="ProductScreenshots/01LoginPage.PNG" width=250> | <img src="ProductScreenshots/02GoogleSignInAuthentication.PNG" width=250> | <img src="ProductScreenshots/03SearchTab.PNG" width=250> | 
+| Result (CollectionView) | FullScreen Video | Play Controls |
+| <img src="ProductScreenshots/04ResultsInCollectionView.PNG" width=250> | <img src="ProductScreenshots/05PlayVideosInFullScreen.PNG" width=250> | <img src="ProductScreenshots/06PlayControlsWhilePlaying.PNG" width=250> |
