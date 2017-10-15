@@ -75,4 +75,10 @@ extension UIViewController {
     activityIndicator.stopAnimating()
   }
   
+  // add rounded edges to UI Controls
+  func addRoundedEdge(to sender: AnyObject) {
+    sender.layer.cornerRadius = 10
+    sender.layer.masksToBounds = true
+  }
+  
 }

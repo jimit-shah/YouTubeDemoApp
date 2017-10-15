@@ -13,14 +13,17 @@ import WebKit
 class VideoCollectionViewController: UICollectionViewController {
 
   // MARK: Properties
-  var videos: [Video]!
   
+  var videos: [Video]!
   let inset: CGFloat = 8.0
   let spacing: CGFloat = 8.0
   let lineSpacing: CGFloat = 4.0
   
+  // MARK: Outlets
+  
   @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
 
+  // MARK: Lifecycle
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
@@ -32,8 +35,10 @@ class VideoCollectionViewController: UICollectionViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     refreshData()
   }
+  
 
   // Reload data in collection view
   func refreshData() {
@@ -55,8 +60,9 @@ class VideoCollectionViewController: UICollectionViewController {
     //cell.titleLabel.text = video.title
     
     let url = URL(string: "https://www.youtube.com/embed/\(video.videoID)")
-    cell.webView.layer.cornerRadius = 10;
-    cell.webView.layer.masksToBounds = true;
+    addRoundedEdge(to: cell.webView)
+    //cell.webView.layer.cornerRadius = 10;
+    //cell.webView.layer.masksToBounds = true;
     cell.webView.load(URLRequest(url: url!))
     
     return cell

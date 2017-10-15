@@ -15,27 +15,33 @@ import Google
 
 class LoginViewController: UIViewController {
   
+  // Properties
+  
+  let googleSignInButton = GIDSignInButton(frame: CGRect(x: 20, y: 100, width: 350, height: 45))
+  
   // MARK: Outlets
   
   @IBOutlet weak var appLabel: UILabel!
-  
   @IBOutlet weak var stackView: UIStackView!
+  
   // MARK: Life cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    appLabel.layer.cornerRadius = 10;
-    appLabel.layer.masksToBounds = true;
+    configureUI()
+    
     GIDSignIn.sharedInstance().uiDelegate = self
     GIDSignIn.sharedInstance().delegate = self
     
-    let googleSignInButton = GIDSignInButton(frame: CGRect(x: 20, y: 100, width: 350, height: 45))
-    googleSignInButton.layer.cornerRadius = 10;
-    googleSignInButton.layer.masksToBounds = true;
+  }
+  
+  func configureUI() {
+    addRoundedEdge(to: googleSignInButton)
+    addRoundedEdge(to: appLabel)
+    
     stackView.addArrangedSubview(googleSignInButton)
     stackView.translatesAutoresizingMaskIntoConstraints = false
-    
     self.view.addSubview(stackView)
     
     // Uncomment to automatically sign in the user.

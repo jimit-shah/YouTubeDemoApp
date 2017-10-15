@@ -37,6 +37,7 @@ class SearchViewController: UIViewController {
   
   func configure() {
     searchTextField.delegate = self
+    addRoundedEdge(to: searchButton)
   }
   
   
