@@ -15,4 +15,6 @@ class VideoCollectionViewCell: UICollectionViewCell {
   // MARK: Outlets
   
   @IBOutlet weak var webView: WKWebView!
+  //@IBOutlet weak var videoTitle: UILabel!
+  
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l6f-f8-e0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
             <objects>
                 <viewController id="ceD-h8-rDl" userLabel="Search" customClass="SearchViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SFH-Fo-dBo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-lh-IOe">
-                                <rect key="frame" x="20" y="104" width="335" height="105"/>
+                                <rect key="frame" x="20" y="104" width="728" height="105"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R2B-4Q-bJq">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="728" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="4QI-6M-Yfb"/>
                                         </constraints>
@@ -35,7 +35,7 @@
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dba-2P-qoE">
-                                        <rect key="frame" x="0.0" y="60" width="335" height="45"/>
+                                        <rect key="frame" x="0.0" y="60" width="728" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="zzs-Dr-CbL"/>
@@ -90,14 +90,14 @@
             <objects>
                 <viewController id="l6f-f8-e0r" customClass="LoginViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fH8-1I-Ne7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4PQ-fP-0B7">
-                                <rect key="frame" x="78.5" y="311" width="219.5" height="45"/>
+                                <rect key="frame" x="274" y="489.5" width="220" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YouTube Search Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mST-ej-WRl">
-                                        <rect key="frame" x="0.0" y="0.0" width="219.5" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
                                         <color key="backgroundColor" red="0.99955970048904419" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="A7c-Cm-Rba"/>
@@ -131,11 +131,11 @@
             <objects>
                 <navigationController storyboardIdentifier="MasterNavigationController" id="JSA-Ph-UlH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sBv-Ow-hO8">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="sZy-4O-8hr" kind="relationship" relationship="rootViewController" id="Bbh-UW-9OS"/>
+                        <segue destination="sZy-4O-8hr" kind="relationship" relationship="rootViewController" id="o99-L8-hHd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVI-BE-9QQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,70 +160,115 @@
                     </tabBar>
                     <connections>
                         <segue destination="ceD-h8-rDl" kind="relationship" relationship="viewControllers" id="5NJ-Lb-yy1"/>
-                        <segue destination="paC-fg-y2h" kind="relationship" relationship="viewControllers" id="DF8-g7-136"/>
+                        <segue destination="ySL-Be-w5s" kind="relationship" relationship="viewControllers" id="5Wx-Rj-iF3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvK-5X-fh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2046" y="-802"/>
         </scene>
-        <!--Videos-->
-        <scene sceneID="aKT-NC-0Pn">
+        <!--Result-->
+        <scene sceneID="55f-4a-K1E">
             <objects>
-                <collectionViewController id="paC-fg-y2h" customClass="VideoCollectionViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8cf-hd-aWJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController id="ySL-Be-w5s" userLabel="Result" customClass="MasterCollectionViewController" customModule="YouTubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IQV-mI-6dh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="eb3-KD-kmo">
-                            <size key="itemSize" width="364" height="244"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mI5-Ta-ADC" customClass="VideoFlowLayout" customModule="YouTubeDemoApp" customModuleProvider="target">
+                            <size key="itemSize" width="300" height="300"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="videoCell" id="BXb-9R-ewk" customClass="VideoCollectionViewCell" customModule="YouTubeDemoApp" customModuleProvider="target">
-                                <rect key="frame" x="0.5" y="0.0" width="364" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Cep-TQ-oNg" customClass="RoundedVideoCell" customModule="YouTubeDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="364" height="244"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXT-u1-0SE">
-                                            <rect key="frame" x="20" y="10" width="324" height="224"/>
-                                            <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <wkWebViewConfiguration key="configuration">
-                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" video="YES"/>
-                                                <wkPreferences key="preferences"/>
-                                            </wkWebViewConfiguration>
-                                        </wkWebView>
+                                        <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="4t2-L3-yva">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <subviews>
+                                                <wkWebView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7N-ho-3CP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="MOD-rq-1ef"/>
+                                                        <constraint firstAttribute="width" constant="300" id="TX3-D3-zw1"/>
+                                                    </constraints>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWk-dV-z12">
+                                                    <rect key="frame" x="16" y="250" width="268" height="50"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.79994991090562606" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="FWk-dV-z12" firstAttribute="leading" secondItem="4t2-L3-yva" secondAttribute="leading" constant="16" id="3hu-2H-5qt"/>
+                                                <constraint firstAttribute="trailing" secondItem="FWk-dV-z12" secondAttribute="trailing" constant="16" id="5lW-qM-va7"/>
+                                                <constraint firstItem="b7N-ho-3CP" firstAttribute="top" secondItem="4t2-L3-yva" secondAttribute="top" id="JdN-qO-DtL"/>
+                                                <constraint firstAttribute="height" constant="300" id="MSk-bP-9XE"/>
+                                                <constraint firstItem="b7N-ho-3CP" firstAttribute="leading" secondItem="4t2-L3-yva" secondAttribute="leading" id="aJO-U9-0p1"/>
+                                                <constraint firstAttribute="bottom" secondItem="FWk-dV-z12" secondAttribute="bottom" id="cac-nl-JFV"/>
+                                                <constraint firstItem="FWk-dV-z12" firstAttribute="top" secondItem="b7N-ho-3CP" secondAttribute="bottom" id="gQ8-HJ-PNR"/>
+                                                <constraint firstAttribute="trailing" secondItem="b7N-ho-3CP" secondAttribute="trailing" id="t1x-aX-agc"/>
+                                                <constraint firstAttribute="width" constant="300" id="zxJ-0u-03V"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="CXT-u1-0SE" firstAttribute="leading" secondItem="BXb-9R-ewk" secondAttribute="leading" constant="20" id="EYZ-rt-7pb"/>
-                                    <constraint firstItem="CXT-u1-0SE" firstAttribute="top" secondItem="BXb-9R-ewk" secondAttribute="top" constant="10" id="J3C-gt-rLU"/>
-                                    <constraint firstAttribute="bottom" secondItem="CXT-u1-0SE" secondAttribute="bottom" constant="10" id="aTC-LU-wS9"/>
-                                    <constraint firstAttribute="trailing" secondItem="CXT-u1-0SE" secondAttribute="trailing" constant="20" id="jfe-x2-rfj"/>
+                                    <constraint firstAttribute="trailing" secondItem="4t2-L3-yva" secondAttribute="trailing" id="QOZ-Ow-cHP"/>
+                                    <constraint firstItem="4t2-L3-yva" firstAttribute="top" secondItem="Cep-TQ-oNg" secondAttribute="top" id="rcv-y6-XV5"/>
+                                    <constraint firstItem="4t2-L3-yva" firstAttribute="leading" secondItem="Cep-TQ-oNg" secondAttribute="leading" id="uWf-tj-x0I"/>
+                                    <constraint firstAttribute="bottom" secondItem="4t2-L3-yva" secondAttribute="bottom" id="vy7-v5-FUN"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="webView" destination="CXT-u1-0SE" id="znf-j8-JSX"/>
+                                    <outlet property="videoTitle" destination="FWk-dV-z12" id="2nk-Xo-X6m"/>
+                                    <outlet property="webView" destination="b7N-ho-3CP" id="sRj-QU-ld0"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeader" id="RYm-R9-tAE" customClass="SectionHeaderView" customModule="YouTubeDemoApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAl-fL-4Dw">
+                                    <rect key="frame" x="8" y="8" width="752" height="34"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="yAl-fL-4Dw" firstAttribute="leading" secondItem="RYm-R9-tAE" secondAttribute="leading" constant="8" id="LBL-QE-eec"/>
+                                <constraint firstAttribute="bottom" secondItem="yAl-fL-4Dw" secondAttribute="bottom" constant="8" id="P3G-y3-AVd"/>
+                                <constraint firstItem="yAl-fL-4Dw" firstAttribute="top" secondItem="RYm-R9-tAE" secondAttribute="top" constant="8" id="ScF-MX-UmK"/>
+                                <constraint firstAttribute="trailing" secondItem="yAl-fL-4Dw" secondAttribute="trailing" constant="8" id="e3s-Vn-Ujc"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="titleLabel" destination="yAl-fL-4Dw" id="Of9-gR-mjC"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
-                            <outlet property="dataSource" destination="paC-fg-y2h" id="WZJ-vl-lkW"/>
-                            <outlet property="delegate" destination="paC-fg-y2h" id="3uH-ge-t3v"/>
+                            <outlet property="dataSource" destination="ySL-Be-w5s" id="ta1-P6-Ph8"/>
+                            <outlet property="delegate" destination="ySL-Be-w5s" id="GJP-Eo-TAJ"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Videos" image="icon_listview-selected" id="uDq-5V-NrN"/>
-                    <navigationItem key="navigationItem" title="Videos" id="1Yr-OF-OLD"/>
-                    <connections>
-                        <outlet property="flowLayout" destination="eb3-KD-kmo" id="hlS-29-idI"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Result" image="icon_listview-selected" selectedImage="icon_listview-selected" id="8pz-Aj-j4r"/>
+                    <navigationItem key="navigationItem" id="h5A-My-cSN"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Nx-pD-Ja7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XR8-Rq-046" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1239.5" y="-458.5"/>
+            <point key="canvasLocation" x="-1240" y="-445"/>
         </scene>
     </scenes>
     <resources>
