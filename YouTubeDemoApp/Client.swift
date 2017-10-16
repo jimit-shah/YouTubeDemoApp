@@ -30,7 +30,7 @@ class Client: NSObject {
     
     // 2/3. Build the URL, Configure the request
     //let request = NSMutableURLRequest(url: urlFromParameters(parametersWithKeys, withPathExtension: method))
-    let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAGZ0YBdo9MQoewpdcIZ9Ga1Zx5jwWYPkk&q=\(formattedText!)&type=video"
+    let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAGZ0YBdo9MQoewpdcIZ9Ga1Zx5jwWYPkk&q=\(formattedText!)&type=video&maxResults=50"
     
     let request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL,
                                       cachePolicy: .useProtocolCachePolicy,

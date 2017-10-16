@@ -77,12 +77,6 @@ extension MasterCollectionViewController {
     
     let video = self.videos[(indexPath as NSIndexPath).row]
     
-//    let url = URL(string: "https://www.youtube.com/embed/\(video.videoID)")
-//    addRoundedBorder(to: cell.webView)
-//
-//    cell.titleLabel.text = video.title
-//    cell.webView.load(URLRequest(url: url!))
-    
     cell.video = video
     return cell
   }
@@ -93,34 +87,28 @@ extension MasterCollectionViewController {
   }
 }
 
-extension MasterCollectionViewController {
-  func addRoundedBorder(to sender: AnyObject) {
-    sender.layer.cornerRadius = 20
-    sender.layer.masksToBounds = true
+/*
+// MARK: UICollectionViewDeligateFlowLayout
+extension MasterCollectionViewController: UICollectionViewDelegateFlowLayout{
+
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+
+    let width = Int((collectionView.frame.width / columns) - (inset + spacing))
+
+    return CGSize(width: width, height: width)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    return spacing
+  }
+
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return lineSpacing
   }
 }
-
-// MARK: UICollectionViewDeligateFlowLayout
-//extension MasterCollectionViewController: UICollectionViewDelegateFlowLayout{
-//
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//
-//    let width = Int((collectionView.frame.width / columns) - (inset + spacing))
-//
-//    return CGSize(width: width, height: width)
-//  }
-//
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//    return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
-//  }
-//
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//    return spacing
-//  }
-//
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//    return lineSpacing
-//  }
-//}
-
+*/
