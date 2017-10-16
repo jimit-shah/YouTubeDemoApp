@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10A3CF6B25DA9ADD9A787F7A /* libPods-YouTubeDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8240B83CB3EAC471AB5203E7 /* libPods-YouTubeDemoApp.a */; };
+		EF36A6D61F9467FF00B1DA9B /* VideoFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36A6D51F9467FF00B1DA9B /* VideoFlowLayout.swift */; };
 		EF57599B1F932F5100EB347D /* MasterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57599A1F932F5100EB347D /* MasterCollectionViewController.swift */; };
 		EF57599D1F933B5B00EB347D /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57599C1F933B5B00EB347D /* SectionHeaderView.swift */; };
 		EF5759A01F944E1000EB347D /* RoundedVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57599F1F944E1000EB347D /* RoundedVideoCell.swift */; };
@@ -34,6 +35,7 @@
 		3D17DEE303C30F5F18EF5F1A /* Pods-YouTubeDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		51A1FCD8BF96B0EC7FA1A05D /* Pods-YouTubeDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubeDemoApp/Pods-YouTubeDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8240B83CB3EAC471AB5203E7 /* libPods-YouTubeDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouTubeDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF36A6D51F9467FF00B1DA9B /* VideoFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFlowLayout.swift; sourceTree = "<group>"; };
 		EF57599A1F932F5100EB347D /* MasterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionViewController.swift; sourceTree = "<group>"; };
 		EF57599C1F933B5B00EB347D /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		EF57599F1F944E1000EB347D /* RoundedVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedVideoCell.swift; sourceTree = "<group>"; };
@@ -90,11 +92,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EF57599E1F9443B100EB347D /* Layout */ = {
+		EF57599E1F9443B100EB347D /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				EF36A6D51F9467FF00B1DA9B /* VideoFlowLayout.swift */,
 			);
-			name = Layout;
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 		EF91584B1F8BF33B0034CA22 = {
@@ -123,7 +126,7 @@
 				EFC70E421F8C7023007A567F /* GCDBlackBox.swift */,
 				EF91586E1F8C002A0034CA22 /* Model */,
 				EFC70E441F8C914F007A567F /* View */,
-				EF57599E1F9443B100EB347D /* Layout */,
+				EF57599E1F9443B100EB347D /* Layouts */,
 				EF9158791F8C20DB0034CA22 /* Controller */,
 				EF91587A1F8C21060034CA22 /* Assets */,
 				EF91587D1F8C219C0034CA22 /* Supporting Files */,
@@ -344,6 +347,7 @@
 				EFC70E411F8C65EA007A567F /* VideosTabBarController.swift in Sources */,
 				EF9158781F8C00F50034CA22 /* Video.swift in Sources */,
 				EF57599D1F933B5B00EB347D /* SectionHeaderView.swift in Sources */,
+				EF36A6D61F9467FF00B1DA9B /* VideoFlowLayout.swift in Sources */,
 				EF9158581F8BF33B0034CA22 /* AppDelegate.swift in Sources */,
 				EF57599B1F932F5100EB347D /* MasterCollectionViewController.swift in Sources */,
 			);

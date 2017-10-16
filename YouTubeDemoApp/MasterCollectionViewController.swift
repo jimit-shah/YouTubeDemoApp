@@ -13,12 +13,12 @@ class MasterCollectionViewController: UICollectionViewController {
   
   var videos: [Video]!
   
-  // implementing custom flow layout
-  let columns: CGFloat = 1.0
-  let inset: CGFloat = 10.0
-  let spacing: CGFloat = 10.0
-  let lineSpacing: CGFloat = 10.0
-  
+//  Implementing custom flow layout
+//  let columns: CGFloat = 1.0
+  let inset: CGFloat = 8.0
+  let spacing: CGFloat = 0
+  let lineSpacing: CGFloat = 8.0
+
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -36,6 +36,14 @@ class MasterCollectionViewController: UICollectionViewController {
     let refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(MasterCollectionViewController.refreshControlDidFire), for: .valueChanged)
     collectionView?.refreshControl = refreshControl
+    
+    // Initial Flow Layout Setup
+    let layout = collectionViewLayout as! VideoFlowLayout
+    let standardItemSize = layout.itemSize.width * layout.standardItemScale
+    layout.estimatedItemSize = CGSize(width: standardItemSize, height: standardItemSize)
+    layout.minimumLineSpacing = lineSpacing
+    layout.sectionInset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+    layout.minimumInteritemSpacing = spacing
     
   }
   
@@ -74,6 +82,7 @@ extension MasterCollectionViewController {
 //
 //    cell.titleLabel.text = video.title
 //    cell.webView.load(URLRequest(url: url!))
+    
     cell.video = video
     return cell
   }
@@ -87,25 +96,26 @@ extension MasterCollectionViewController {
 }
 
 // MARK: UICollectionViewDeligateFlowLayout
-extension MasterCollectionViewController: UICollectionViewDelegateFlowLayout{
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    
-    let width = Int((collectionView.frame.width / columns) - (inset + spacing))
-    
-    return CGSize(width: width, height: width)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return spacing
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return lineSpacing
-  }
-}
+//extension MasterCollectionViewController: UICollectionViewDelegateFlowLayout{
+//
+//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//
+//    let width = Int((collectionView.frame.width / columns) - (inset + spacing))
+//
+//    return CGSize(width: width, height: width)
+//  }
+//
+//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//    return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+//  }
+//
+//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//    return spacing
+//  }
+//
+//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//    return lineSpacing
+//  }
+//}
+
