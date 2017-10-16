@@ -26,10 +26,11 @@ class Client: NSObject {
   func taskForGETMethod(_ method: String, _ searchText: String, completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
     
     //let parametersWithKeys = parameters
+    let formattedText = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
     
     // 2/3. Build the URL, Configure the request
     //let request = NSMutableURLRequest(url: urlFromParameters(parametersWithKeys, withPathExtension: method))
-    let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAGZ0YBdo9MQoewpdcIZ9Ga1Zx5jwWYPkk&q=\(searchText)&type=video"
+    let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAGZ0YBdo9MQoewpdcIZ9Ga1Zx5jwWYPkk&q=\(formattedText!)&type=video"
     
     let request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL,
                                       cachePolicy: .useProtocolCachePolicy,
