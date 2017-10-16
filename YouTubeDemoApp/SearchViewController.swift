@@ -46,16 +46,16 @@ class SearchViewController: UIViewController {
     
     startActivityIndicator(for: self, activityIndicator, .whiteLarge)
     
-    let collectionViewController = self.tabBarController?.viewControllers![1] as! VideoCollectionViewController
-    let masterCollectionVC = self.tabBarController?.viewControllers![2] as! MasterCollectionViewController
+    let masterCollectionVC = self.tabBarController?.viewControllers![1] as! MasterCollectionViewController
     
     Client.sharedInstance().getSearchVideos(searchTextField.text!) { (videos, error) in
       if let videos  = videos {
-        collectionViewController.videos = videos
+    
         masterCollectionVC.videos = videos
+        
         performUIUpdatesOnMain {
           self.stopActivityIndicator(for: self, self.activityIndicator)
-          collectionViewController.refreshData()
+         
           masterCollectionVC.refreshControlDidFire()
           
           self.tabBarController?.selectedIndex = 1

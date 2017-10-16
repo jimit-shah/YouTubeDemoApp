@@ -5,7 +5,7 @@
 //  Created by Jimit Shah on 10/9/17.
 //  Copyright © 2017 Jimit Shah. All rights reserved.
 //
-
+// Note: Not being used (replaced by MasterCollectionViewController)
 import UIKit
 import WebKit
 

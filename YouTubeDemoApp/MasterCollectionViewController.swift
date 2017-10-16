@@ -86,6 +86,11 @@ extension MasterCollectionViewController {
     cell.video = video
     return cell
   }
+  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    self.collectionView?.collectionViewLayout.invalidateLayout()
+  }
 }
 
 extension MasterCollectionViewController {
